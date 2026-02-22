@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔍 SEOBot — Open Source AI SEO Tool
 
-## Getting Started
+> Keyword research, AI content generation, and technical SEO audit — all in one tool.
 
-First, run the development server:
+**[GitHub](https://github.com/George3307/seobot)** 
+
+## Features
+
+### 📊 Keyword Research
+- Enter a seed keyword → expand via Google Suggest (2-level recursive)
+- Automatic clustering by semantic similarity
+- Export results as CSV
+
+### ✍️ AI Content Generator
+- Input keyword → generate SEO-optimized outline (3 title suggestions)
+- Generate full article from outline (English & Chinese)
+- Built-in SEO scoring: keyword density, headings, readability
+- Export as Markdown
+
+### 🔍 Technical SEO Audit
+- Input any URL → instant analysis
+- Checks: title tag, meta description, H1 tags, HTTPS, viewport, lang attribute
+- Pass/Warn/Fail indicators
+
+## Quick Start
+
+```bash
+git clone https://github.com/George3307/seobot.git
+cd seobot
+npm install
+```
+
+Set your OpenAI API key (required for content generation):
+```bash
+export OPENAI_API_KEY=your_key_here
+```
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 14 (App Router)
+- **UI**: Tailwind CSS + shadcn/ui
+- **AI**: OpenAI GPT-4o-mini
+- **Language**: TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Roadmap
 
-## Learn More
+- [ ] Rank tracking (daily keyword position monitoring)
+- [ ] Internal link optimization
+- [ ] Programmatic SEO (template-based bulk page generation)
+- [ ] Backlink analysis
+- [ ] Google Search Console integration
+- [ ] Multi-language expansion
+- [ ] Self-hosted Docker image
 
-To learn more about Next.js, take a look at the following resources:
+## Self-Host
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is a standard Next.js app. Deploy anywhere:
+- Vercel (recommended)
+- Docker
+- Any Node.js server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+PRs welcome! Check the roadmap above for what's next.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
+
+---
+
+Built by [George3307](https://github.com/George3307) ✳️
