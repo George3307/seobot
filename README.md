@@ -1,26 +1,52 @@
-# 🔍 SEOBot — Open Source AI SEO Tool
+<p align="center">
+  <h1 align="center">🔍 SEOBot</h1>
+  <p align="center"><strong>Open-source AI SEO toolkit — research, write, audit, publish. All in one.</strong></p>
+  <p align="center">
+    <a href="#features">Features</a> •
+    <a href="#quick-start">Quick Start</a> •
+    <a href="#screenshots">Screenshots</a> •
+    <a href="#roadmap">Roadmap</a> •
+    <a href="#self-host">Self-Host</a>
+  </p>
+</p>
 
-> Keyword research, AI content generation, and technical SEO audit — all in one tool.
+---
 
-**[GitHub](https://github.com/George3307/seobot)** 
+**SEOBot** is a free, open-source AI-powered SEO toolkit. No subscriptions, no limits, no vendor lock-in. Bring your own OpenAI key and run it locally or deploy anywhere.
+
+> 💡 **Why SEOBot?** Tools like Ahrefs ($99/mo), Surfer ($89/mo), and Jasper ($49/mo) charge hundreds per month. SEOBot gives you 80% of the functionality for the cost of your OpenAI API calls (~$0.01/article).
 
 ## Features
 
 ### 📊 Keyword Research
-- Enter a seed keyword → expand via Google Suggest (2-level recursive)
-- Automatic clustering by semantic similarity
+- Enter a seed keyword → auto-expand via Google Suggest (2-level recursive)
+- Smart clustering by semantic similarity
 - Export results as CSV
+- **Zero API cost** — uses Google's public autocomplete
 
 ### ✍️ AI Content Generator
-- Input keyword → generate SEO-optimized outline (3 title suggestions)
-- Generate full article from outline (English & Chinese)
-- Built-in SEO scoring: keyword density, headings, readability
-- Export as Markdown
+- 3-step workflow: **Keyword → Outline → Full Article**
+- 3 AI-generated title suggestions per keyword
+- SEO scoring with pass/warn/fail indicators (keyword density, headings, readability)
+- English & Chinese (中文) support
+- Copy to clipboard or export as Markdown
 
 ### 🔍 Technical SEO Audit
-- Input any URL → instant analysis
-- Checks: title tag, meta description, H1 tags, HTTPS, viewport, lang attribute
-- Pass/Warn/Fail indicators
+- Comprehensive 18-point analysis across 5 categories:
+  - **Meta Tags**: Title, description, OG tags, Twitter card, canonical, robots, structured data
+  - **Content**: H1, word count, heading hierarchy, image alt text, internal/external links
+  - **Security**: HTTPS, mixed content detection
+  - **Mobile**: Viewport, language attribute
+  - **Performance**: Load time, page size
+- Visual score (0-100) with per-category breakdowns
+- Heading structure visualization
+
+### 📤 One-Click Publish
+- **Dev.to** — Publish or save as draft with your API key
+- **WordPress** — Post to any WordPress site via REST API
+- **Twitter/X** — Share article summaries
+- **Markdown** — Export for static site generators (Hugo, Astro, Jekyll)
+- Credentials saved locally (never leaves your browser)
 
 ## Quick Start
 
@@ -30,7 +56,7 @@ cd seobot
 npm install
 ```
 
-Set your OpenAI API key (required for content generation):
+Set your OpenAI API key (required for content generation only):
 ```bash
 export OPENAI_API_KEY=your_key_here
 ```
@@ -40,33 +66,62 @@ npm run dev
 # Open http://localhost:3000
 ```
 
+> Keyword research and SEO audit work **without any API key**.
+
 ## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
-- **UI**: Tailwind CSS + shadcn/ui
-- **AI**: OpenAI GPT-4o-mini
-- **Language**: TypeScript
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 14 (App Router) |
+| UI | Tailwind CSS + shadcn/ui |
+| AI | OpenAI GPT-4o-mini |
+| Language | TypeScript |
+| Deployment | Vercel / Docker / Any Node.js server |
 
 ## Roadmap
 
+- [x] Keyword research (Google Suggest expansion + clustering)
+- [x] AI content generation with SEO scoring
+- [x] Technical SEO audit (18 checks)
+- [x] Multi-platform publishing (Dev.to, WordPress, Twitter, Markdown)
 - [ ] Rank tracking (daily keyword position monitoring)
-- [ ] Internal link optimization
-- [ ] Programmatic SEO (template-based bulk page generation)
+- [ ] SERP analysis (competitor content scoring)
+- [ ] Internal link optimization suggestions
+- [ ] Programmatic SEO (template-based bulk generation)
 - [ ] Backlink analysis
 - [ ] Google Search Console integration
-- [ ] Multi-language expansion
-- [ ] Self-hosted Docker image
+- [ ] Docker image for one-command deploy
+- [ ] Chrome extension
 
 ## Self-Host
 
-This is a standard Next.js app. Deploy anywhere:
-- Vercel (recommended)
-- Docker
-- Any Node.js server
+Standard Next.js app. Deploy anywhere:
+
+```bash
+# Docker (coming soon)
+docker run -e OPENAI_API_KEY=sk-xxx -p 3000:3000 seobot
+
+# Vercel
+vercel deploy
+
+# PM2
+npm run build && pm2 start npm --name seobot -- start
+```
+
+## Cost Comparison
+
+| Tool | Monthly Cost | What You Get |
+|------|-------------|--------------|
+| Ahrefs | $99-999 | Full SEO suite |
+| Surfer SEO | $89-299 | Content optimization |
+| Jasper AI | $49-125 | AI writing |
+| **SEOBot** | **$0 + API** | Keyword research + AI content + audit + publish |
+
+> Average OpenAI API cost: ~$0.01 per article generated
 
 ## Contributing
 
-PRs welcome! Check the roadmap above for what's next.
+PRs welcome! Check the [roadmap](#roadmap) above for what's next, or open an issue.
 
 ## License
 
@@ -74,4 +129,8 @@ MIT
 
 ---
 
-Built by [George3307](https://github.com/George3307) ✳️
+<p align="center">
+  Built with ❤️ by <a href="https://github.com/George3307">George3307</a> ✳️
+  <br/>
+  <sub>If this saves you money, ⭐ the repo!</sub>
+</p>
