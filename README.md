@@ -123,6 +123,15 @@ npm run build && pm2 start npm --name seobot -- start
 
 PRs welcome! Check the [roadmap](#roadmap) above for what's next, or open an issue.
 
+## Support the Project
+
+If SEOBot saves you money, consider supporting development:
+
+- ⭐ **Star this repo** — helps others find it
+- 🐛 **Report bugs** — open an issue
+- 🔧 **Contribute** — PRs welcome
+- ☕ **Buy me a coffee** — [buymeacoffee.com/george3307](https://buymeacoffee.com/george3307)
+
 ## License
 
 MIT
