@@ -3,13 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { LayoutDashboard, Search, FileText, Activity } from "lucide-react";
+import { LayoutDashboard, Search, FileText, Activity, CreditCard } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/keywords", label: "Keyword Research", icon: Search },
   { href: "/content", label: "Content Generator", icon: FileText },
   { href: "/audit", label: "Technical Audit", icon: Activity },
+  { href: "/pricing", label: "Pricing", icon: CreditCard },
 ];
 
 export function Sidebar() {
