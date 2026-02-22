@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { FileText, Loader2, Copy, Download, CheckCircle, AlertTriangle, XCircle } from "lucide-react";
+import PublishPanel from "@/components/publish-panel";
 
 interface OutlineSection {
   tag: string;
@@ -335,6 +336,9 @@ export default function ContentPage() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Publish Panel */}
+          <PublishPanel title={selectedTitle} content={article} keyword={keyword} />
         </div>
       )}
     </div>
