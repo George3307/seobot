@@ -5,6 +5,7 @@
     <a href="#features">Features</a> •
     <a href="#quick-start">Quick Start</a> •
     <a href="#screenshots">Screenshots</a> •
+    <a href="#limitations">Limitations</a> •
     <a href="#roadmap">Roadmap</a> •
     <a href="#self-host">Self-Host</a>
   </p>
@@ -12,9 +13,21 @@
 
 ---
 
+```bash
+git clone https://github.com/George3307/seobot.git && cd seobot && npm install && npm run dev
+# Open http://localhost:3000 — keyword research & audit work instantly, no API key needed
+```
+
 **SEOBot** is a free, open-source AI-powered SEO toolkit. No subscriptions, no limits, no vendor lock-in. Bring your own OpenAI key and run it locally or deploy anywhere.
 
 > 💡 **Why SEOBot?** Tools like Ahrefs ($99/mo), Surfer ($89/mo), and Jasper ($49/mo) charge hundreds per month. SEOBot gives you 80% of the functionality for the cost of your OpenAI API calls (~$0.01/article).
+
+### ⚡ 30-Second Demo
+
+1. **Keyword Research** — Type "best coffee maker" → get 50+ long-tail keywords grouped by intent, zero API cost
+2. **AI Content** — Pick a keyword → get 3 title suggestions → generate a 1500-word SEO-optimized article with score
+3. **Site Audit** — Paste any URL → get an 18-point technical SEO report with actionable fixes
+4. **Publish** — One click to Dev.to, WordPress, Twitter, or Markdown export
 
 ## Features
 
@@ -77,6 +90,18 @@ npm run dev
 | AI | OpenAI GPT-4o-mini |
 | Language | TypeScript |
 | Deployment | Vercel / Docker / Any Node.js server |
+
+## Limitations
+
+Being honest about what SEOBot **can't** do (yet):
+
+- **No backlink data** — we don't crawl the web like Ahrefs/Moz. Backlink analysis is on the roadmap.
+- **No rank tracking** — can't monitor keyword positions over time (yet).
+- **Keyword volume estimates are absent** — we use Google Suggest for discovery, not paid keyword databases. You get real queries people search, but no monthly volume numbers.
+- **AI content needs human editing** — the generated articles are good starting points (SEO-optimized structure, keyword placement), but they need your expertise and voice. Don't publish AI output raw.
+- **Audit is client-side only** — we can't check server configs, Core Web Vitals, or crawl your entire site. For deep technical audits, pair with Google Search Console.
+
+> We'd rather under-promise and over-deliver. If a feature matters to you, [open an issue](https://github.com/George3307/seobot/issues) — it helps us prioritize.
 
 ## Roadmap
 
