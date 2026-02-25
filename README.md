@@ -1,6 +1,9 @@
 <p align="center">
   <h1 align="center">🔍 SEOBot</h1>
-  <p align="center"><strong>Open-source AI SEO toolkit — research, write, audit, publish. All in one.</strong></p>
+  <p align="center"><strong>Open-source AI SEO toolkit — research, write, audit, publish. All in one.</strong>
+  <p align="center">
+    <a href="https://seobot-seven.vercel.app"><strong>🔗 Live Demo</strong></a>
+  </p></p>
   <p align="center">
     <a href="#features">Features</a> •
     <a href="#quick-start">Quick Start</a> •
